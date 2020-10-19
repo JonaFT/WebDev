@@ -16,6 +16,9 @@ urlpatterns = [
     path('documents/', include(wagtaildocs_urls)),
 
     path('search/', search_views.search, name='search'),
+    path('notifications/', include('django_nyt.urls')),
+    path('wiki/', include('wiki.urls')),
+    path('', include('allauth.urls')),
 
 ]
 
