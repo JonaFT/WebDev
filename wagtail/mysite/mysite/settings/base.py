@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'blog',
     'flex',
     'streams',
+    'wikifisc',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
