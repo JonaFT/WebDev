@@ -7,15 +7,13 @@ from django.db import models
 
 from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.core.models import Page
+from wiki.sites import WikiSite
 
 
 class Wiki(Page):
     """Flexibile page class."""
 
     template = "wiki/base.html"
-
-    # @todo add streamfields 
-    # content = StreamField()
 
     subtitle = models.CharField(max_length=100, null=True, blank=True)
 
@@ -26,3 +24,7 @@ class Wiki(Page):
     class Meta:  # noqa 
         verbose_name = "Wiki page"
         verbose_name_plural = "Wiki Pages"
+
+
+class MyWikiSite(WikiSite):
+    pass
