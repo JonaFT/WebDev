@@ -24,12 +24,27 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
+    # Project apps
     'home',
     'search',
     'blog',
     'flex',
     'streams',
     'wikifisc',
+
+    #django apps
+    'django.contrib.sites',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.humanize.apps.HumanizeConfig',
+    'django_nyt.apps.DjangoNytConfig',
+
+    #third party apps
+    'crispy_forms',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -46,21 +61,10 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
 
-    'django.contrib.sites',
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
 
-    
-    'django.contrib.humanize.apps.HumanizeConfig',
-    'django_nyt.apps.DjangoNytConfig',
     'mptt',
     'sekizai',
     'sorl.thumbnail',
@@ -196,6 +200,7 @@ WAGTAIL_SITE_NAME = "mysite"
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_URL = '/login/'
 # LOGIN_REDIRECT_URL = '/'
